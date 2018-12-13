@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Глейси - магазин мороженного собственного производства</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -13,8 +17,9 @@
     </div>
     <nav class="main-navigation">
       <ul class="site-navigation">
-        <li class="site-navigation-current"><a href="catalog.html">Каталог</a>
-          <ul>
+        <li class="site-navigation-current">
+          <a href="catalog.html">Каталог</a>
+          <ul class="site-navigation-dropdown-list">
             <li><a href="#">Новинки</a></li>
             <li><a href="#">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -30,27 +35,23 @@
         <input type="submit"  value="Найти">
       </form>
 
-      <ul class="user-nav">
-        <li><a class="login-link" href="login.html">Вход</a> 
+      <ul class="user-navigation">
+          <li><a class="login-link" href="login.html">Вход</a>
+            <form class="login-form" method="post">
+              <input type="text" name="login" placeholder="Электронная почта">
+              <input type="password" name="password" placeholder="Пароль">
+              <button class="button" type="submit">Войти</button>
+              <a class="restore" href="#">Забыли пароль?</a>
+              <a class="registration" href="#">Новая регистрация</a>
+              </form> 
+          </li>
+          <li class="basket">
+          <a class="basket-link" href="basket.html">Корзина</a>
         </li>
-      </ul>
-      <section class="login">
-          <h2>Личный кабинет</h2>
-          <form class="login-form" method="post">
-          <input type="text" name="login" placeholder="Электронная почта">
-          <input type="password" name="password" placeholder="Пароль">
-          <button class="button" type="submit">Войти</button>
-          <a class="restore" href="#">Забыли пароль?</a>
-          <a class="registration" href="#">Новая регистрация</a>
-          </form>
-        </section>
-
-      <ul class="user-nav">
-        <li class="basket">Корзина</li>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
     <section class="header-contacts">
-      <h2>Контактаня информация</h2>
+      <h2 class="visually-hidden">Контактаня информация</h2>
       <p>C 10 до 20, ежедневно</p>
       <p>8 812 450-25-25</p>
     </section>
@@ -71,7 +72,7 @@
             <option value="popularity">По популярности</option>
           </select>
         </div>
-
+        <!--
         <div class="filtres-price">
           <label for="price">Цена:</label>
           <input type="range" min="100" max="500" id="price" name="price">
@@ -80,6 +81,7 @@
            <output name="pricerange"></output>
           </div>
         </div>
+        -->
 
         <fieldset class="filtres-fat">
           <legend class="filtres-fat-title">Жирность:</legend>
@@ -299,14 +301,14 @@
           <li><a class="social-bottom" href="#">VK</a></li>
         </ul>
       </div>
-      <div>
-        <h2 class="for-suppliers">Для поставщиков</h2>
-        <ul>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
-        </ul>
-      </div>
+      <section class="for-suppliers">
+          <h2 class="for-suppliers-title">Для поставщиков</h2>
+          <ul>
+            <li><a href="#">О производстве</a></li>
+            <li><a href="#">Наши документы</a></li>
+            <li><a href="#">Экологические стандарты</a></li>
+          </ul>
+        </section>
       <div class="footer-copyright">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
         <p>Создано в HTML Academy © 2017</p>
